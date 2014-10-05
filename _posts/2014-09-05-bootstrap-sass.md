@@ -22,7 +22,7 @@ Hay varias formas para comenzar a usarlo: a través del terminal con Ruby on Rai
 Personalmente prefiero usar Bower. Abro el terminal, me dirigo al lugar donde crearé mi proyecto, creo una carpeta y ejecuto el siguiente comando:
 
 <pre>
-<code class="language-bash">$ bower install bootstrap-sass-official</code>
+<code class="language-bash">bower install bootstrap-sass-official</code>
 </pre>
 
 ### Compilando Sass
@@ -30,7 +30,7 @@ Personalmente prefiero usar Bower. Abro el terminal, me dirigo al lugar donde cr
 Normalmente uso Grunt para compilar mi Sass además de ejecutar otras tareas, pero dejaré eso para otro post. Existen también programas con un interfaz gráfico en caso de que no te sientas cómodo usando el terminal. Para los usuarios de Mac está [Codekit](https://incident57.com/codekit/), [Prepros](http://alphapixels.com/prepros/) está disponible tanto para usuarios de Windows y Mac, al igual que [Koala](http://koala-app.com/). Sin embargo, esto es fácil de hacer desde el terminal:
 
 <pre>
-<code class="language-bash">$ sass --watch tu-archivo-sass.scss:tu-archivo-css.css</code>
+<code class="language-bash">sass --watch tu-archivo-sass.scss:tu-archivo-css.css</code>
 </pre>
 
 (*Estoy asumiendo que ya tienen instalado Ruby y el gem de Sass*).

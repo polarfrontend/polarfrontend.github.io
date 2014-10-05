@@ -41,7 +41,7 @@ Con el tiempo aprendí a usar el terminal. Como ya vimos, no es necesario ya que
 1. Instalar Ruby. Si estás usando un Mac no tienes que preocuparte, ya viene instalado. Si usas Windows, puedes usar el [instalador de ruby](http://www.rubyinstaller.org/).
 2. Abre el terminal y ejecuta el siguiente comando: 
 
-<pre><code class="language-scss">$ gem install sass </code></pre>
+<pre><code class="language-bash">gem install sass </code></pre>
 
 ## Ejemplo práctico
 
@@ -74,7 +74,7 @@ Nuestro index.html es muy básico y en el enlazamos lo que será el css:
 Hasta el momento todo es tal cual como si trabajáramos con css. A continuación comenzamos a usar Sass. Abrimos el terminal, nos dirigimos a la carpeta de nuestro proyecto y ejecutamos el siguiente comando:
 
 <pre>
-<code class="language-bash">$ sass --watch style.scss:style.css</code>
+<code class="language-bash">sass --watch style.scss:style.css</code>
 </pre>
 
 Ahora automáticamente se crea el archivo `style.css` y estamos vigilando nuestro archivo `style.scss` para que ante cualquier cambio en él, se compila y actualiza.
