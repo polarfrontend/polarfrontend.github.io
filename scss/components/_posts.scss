@@ -1,0 +1,23 @@
+.post-header {
+    margin-bottom: $spacing;
+}
+
+.post-meta,
+.meta {
+    display: inline-block;
+    margin-top: 5px;
+    color: $baseColorLight;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.articles {
+    margin-top: $spacing*3;
+    h2 {
+        margin: 0;
+    }
+}
+
+.page-title + article {
+    margin-top: 0;
+}

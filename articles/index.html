@@ -1,0 +1,18 @@
+---
+layout: page
+title: Artículos
+description: "Artículos de front end development."
+permalink: /articulos/
+---
+
+{% for post in site.posts %}
+    <article class="articles">
+        <header class="post-header">
+            <h2 class="h3"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </header>
+        <div class="post-content">
+            {{ post.excerpt }}
+        </div>
+    </article>
+{% endfor %}

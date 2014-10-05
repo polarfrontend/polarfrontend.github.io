@@ -1,0 +1,28 @@
+# Site settings
+title: Polar Front-End | Blog de Front-End development
+description: "Polar Front-End es un blog con artículos de front-end development, así de simple."
+baseurl: ""
+url: "http://polarfrontend.github.io"
+permalink: :title
+
+# Build settings
+markdown: kramdown
+
+paginate: 1
+
+exclude: [
+    scss,
+    package.json,
+    Gruntfile.js,
+    node_modules,
+    .sass-cache,
+    Gemfile,
+    Gemfile.lock,
+    .gitignore
+]
+
+# Plugins
+gems: 
+    - jekyll-sitemap
+
+disqus-shortname: polarfrontend

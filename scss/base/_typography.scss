@@ -1,0 +1,77 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: $headerFont;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1,
+.h1 {
+    margin: 0;
+    font-size: 1.85rem;
+}
+
+h2,
+.h2 {
+    margin: $spacing*3 0 $spacing;
+    font-size: 1.6rem;
+}
+
+h3,
+.h3 {
+    margin: $spacing*2 0 $spacing;
+    font-size: 1.25rem;
+}
+
+h4,
+.h4 {
+    margin: $spacing 0;
+    font-size: 1.1rem;
+}
+
+p {
+    margin: 0 0 $spacing;
+}
+
+blockquote {
+    padding-left: $spacingDouble;
+    margin: $spacing 0;
+    border-left: solid 4px #ddd;
+    color: $baseColorLight;
+    font-style: italic;
+    p {
+        margin: 0;
+    }
+}
+
+ul, ol {
+    padding: 0;
+    margin: $spacing 0 $spacing $spacing;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 5px 0 5px $spacing;
+}
+
+strong {
+    font-weight: 600;
+}
+
+pre {
+    padding: 15px 20px;
+    border-radius: 2px;
+    code {
+        padding: 0px;
+    }
+}
+
+code {
+    padding: 2px;
+    background: #f5f2f0;
+    border-radius: 2px;
+}

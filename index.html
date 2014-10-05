@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+    {% for post in paginator.posts %}
+        <article class="post">
+            <header class="post-header">
+                <h1>{{ post.title }}</h1>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </header>
+            <div class="post-content">
+                {{ post.content }}
+            </div>
+        </article>
+    {% endfor %}
+
+    <nav class="pagination">
+    {% if paginator.next_page %}
+        <a class="previous" href="/page{{paginator.next_page}}/">Anterior</a>
+    {% else %}
+        <span class="previous">Anterior</span>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+            <a class="next" href="/">Siguiente</a>
+        {% else %}
+            <a class="next" href="/page{{paginator.previous_page}}/">Siguiente</a>
+        {% endif %}
+    {% else %}
+            <span class="next">Siguiente</span>
+    {% endif %}
+    </nav>

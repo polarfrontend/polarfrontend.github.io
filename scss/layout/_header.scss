@@ -1,0 +1,35 @@
+.main-header {
+    @extend %clearfix;
+    text-align: center;
+    padding: $spacingDouble 0;
+    .logo {
+        font-size: 2.2rem;
+        font-weight: 600;
+        font-family: $headerFont;
+        text-transform: uppercase;
+        line-height: 1;
+        @include breakpoint(medium) {
+            float: left;
+        }
+        a {
+            display: inline-block;
+            border-bottom: none;
+            color: $primaryColor;
+        }
+    }
+
+    .main-nav {
+        margin-top: 5px;
+        @include breakpoint(medium) {
+            float: right; 
+        }
+        a {
+            display: inline-block;
+            margin: 0 12px;
+            font-size: 0.813rem;
+            line-height: 1;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+}

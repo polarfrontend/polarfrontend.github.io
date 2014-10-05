@@ -1,0 +1,27 @@
+.main-footer {
+    padding: $spacing 0;
+    margin-top: $spacingDouble;
+    border-top: solid 2px $grey;
+    text-align: center;
+    @extend %clearfix;
+    small {
+        @include breakpoint(medium) {
+            margin-top: 10px;
+            float: left;
+        }
+    }
+    .footer-nav {
+        @include breakpoint(medium) {
+            float: right;
+        }
+    }
+    a {
+        margin-left: 12px;
+        font-size: 0.813rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

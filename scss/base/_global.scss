@@ -1,0 +1,43 @@
+html {
+    font-size: 90%;
+    transition: font-size 0.2s ease;
+    @include breakpoint(small) {
+        font-size: 100%;
+        border: solid 15px $lightGrey;
+    }
+    @include breakpoint(medium) {
+        font-size: 110%;
+    }
+}
+
+body {
+    @extend %container;
+    color: $baseColor;
+    font-size: 1.1rem;
+    font-family: $baseFont;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+
+a {
+    color: $primaryColor;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $baseColor;
+        border-bottom: solid 1px $primaryColor;
+    }
+} 
+
+nav,
+.post-header {
+    a {
+        color: $baseColor;
+        text-decoration: none;
+        border-bottom: dotted 1px rgba(0, 0, 0, 0.2);
+        &:hover {
+            border-bottom: solid 1px $primaryColor;
+        }
+    }
+}

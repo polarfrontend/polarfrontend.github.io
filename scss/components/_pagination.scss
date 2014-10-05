@@ -1,0 +1,27 @@
+.pagination {
+    @extend %clearfix;
+    margin-top: $spacingDouble;
+    .previous,
+    .next {
+        display: inline-block;
+        padding: $spacingHalf $spacing;
+        border: solid 2px $grey;
+        border-radius: 2px;
+    }
+    .previous {
+        float: left;
+    }
+    .next {
+        float: right;
+    }
+    a {
+        color: $primaryColor;
+        &:hover, &:active {
+            background: $grey;
+        }
+    }
+    span {
+        border-color: $grey;
+        color: $grey;
+    }
+}

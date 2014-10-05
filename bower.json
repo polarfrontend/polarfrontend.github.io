@@ -1,0 +1,8 @@
+{
+    "name": "obaez",
+    "version": "0.1.0",
+    "dependencies": {
+        "normalize-scss": "~3.0.1",
+        "susy": "~2.1.3"
+    }
+}
