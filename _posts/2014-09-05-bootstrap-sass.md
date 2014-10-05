@@ -22,9 +22,7 @@ Hay varias formas para comenzar a usarlo: a través del terminal con Ruby on Rai
 Personalmente prefiero usar Bower. Abro el terminal, me dirigo al lugar donde crearé mi proyecto, creo una carpeta y ejecuto el siguiente comando:
 
 <pre>
-<code class="language-bash">
-$ bower install bootstrap-sass-official
-</code>
+<code class="language-bash">$ bower install bootstrap-sass-official</code>
 </pre>
 
 ### Compilando Sass
@@ -32,9 +30,7 @@ $ bower install bootstrap-sass-official
 Normalmente uso Grunt para compilar mi Sass además de ejecutar otras tareas, pero dejaré eso para otro post. Existen también programas con un interfaz gráfico en caso de que no te sientas cómodo usando el terminal. Para los usuarios de Mac está [Codekit](https://incident57.com/codekit/), [Prepros](http://alphapixels.com/prepros/) está disponible tanto para usuarios de Windows y Mac, al igual que [Koala](http://koala-app.com/). Sin embargo, esto es fácil de hacer desde el terminal:
 
 <pre>
-<code class="language-bash">
-$ sass --watch tu-archivo-sass.scss:tu-archivo-css.css
-</code>
+<code class="language-bash">$ sass --watch tu-archivo-sass.scss:tu-archivo-css.css</code>
 </pre>
 
 (*Estoy asumiendo que ya tienen instalado Ruby y el gem de Sass*).
@@ -42,9 +38,7 @@ $ sass --watch tu-archivo-sass.scss:tu-archivo-css.css
 Importamos Bootstrap en nuestro archivo .scss y estamos listo para comenzar:
 
 <pre>
-<code class="language-scss">
-@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-</code>
+<code class="language-scss">@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";</code>
 </pre>
 
 ## Empecemos a utilizar Sass
@@ -56,55 +50,47 @@ Habíamos quedado en que usando un preprocesador podemos entre otras cosas elegi
 Desde su versión 3, Bootstrap nos permite utilizar clases para crear columnas de distintos tamaños dependiendo del ancho de la pantalla. Estas son: **.col-sm-x**, **.col-md-x** y **.col-lg-x**. Si usáramos su versión solo con css podríamos hacer algo así:
 
 <pre>
-<code class="language-markup">
-<div class="row">
-    <div class="habilidades col-md-6 col-lg-8">
-        contenido
-    </div>
+<code class="language-markup">&lt;div class="row"&gt;
+    &lt;div class="habilidades col-md-6 col-lg-8"&gt;
+        // contenido
+    &lt;/div&gt;
 
-    <div class="lista-habilidades col-md-6 col-lg-4">
-        contenido
-    </div>
-</div>
-</code>
+    &lt;div class="lista-habilidades col-md-6 col-lg-4"&gt;
+        // contenido
+    &lt;/div&gt;
+&lt;/div&gt;</code>
 </pre>
 
 Funciona perfectamente bien, pero con Sass podemos eliminar el uso de esas clases y dejar nuestro html un poco más limpio:
 
 <pre>
-<code class="language-scss">
-.habilidades {
+<code class="language-scss">.habilidades {
     @include make-md-column(6);
     @include make-lg-column(8);
-}
-</code>
+}</code>
 </pre>
 
 O mejor aun, podemos utilizar @extend para agrupar los selectores con las mismas propiedades:
 
 <pre>
-<code class="language-scss">
-.habilidades {
+<code class="language-scss">.habilidades {
     @extend .col-md-6;
     @extend .col-lg-8;
-}
-</code>
+}</code>
 </pre>
 
 Nos daría el mismo resultado que usando la versión sin preprocesador, pero en este caso el html sería el siguiente:
 
 <pre>
-<code class="language-markup">
-<div class="row">
-    <div class="habilidades">
+<code class="language-markup">&lt;div class="row"&gt;
+    &lt;div class="habilidades"&gt;
         // contenido
-    </div>
+    &lt;/div&gt;
 
-    <div class="lista-habilidades">
+    &lt;div class="lista-habilidades"&gt;
         // contenido
-    </div>
-</div>
-</code>
+    &lt;/div&gt;
+&lt;/div&gt;</code>
 </pre>
 
 ### Modificando valores
@@ -112,8 +98,7 @@ Nos daría el mismo resultado que usando la versión sin preprocesador, pero en 
 Bootstrap viene con el código separado en distintos módulos. La estructura inicial del archivo _bootstrap.scss debería ser más o menos así:
 
 <pre>
-<code class="language-scss">
-// Core variables and mixins
+<code class="language-scss">// Core variables and mixins
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
@@ -162,19 +147,16 @@ Bootstrap viene con el código separado en distintos módulos. La estructura ini
 
 // Utility classes
 @import "bootstrap/utilities";
-@import "bootstrap/responsive-utilities";
-</code>
+@import "bootstrap/responsive-utilities";</code>
 </pre>
 
 De esta forma si no queremos incluir algo, simplemente lo desactivamos, y si más adelante deseamos usarlo, lo volvemos a activar:
 
 <pre>
-<code class="language-scss">
-// Reset and dependencies
+<code class="language-scss">// Reset and dependencies
 @import "bootstrap/normalize";
 @import "bootstrap/print";
-// @import "bootstrap/glyphicons"; desactivamos los glyphicons
-</code>
+// @import "bootstrap/glyphicons"; desactivamos los glyphicons</code>
 </pre>
 
 ### Como cambiar los breakpoints
@@ -182,28 +164,20 @@ De esta forma si no queremos incluir algo, simplemente lo desactivamos, y si má
 Dentro de _variables.scss se pueden modificar los valores predeterminados. Colores, tipografía, botones, etc. Si quiesieramos cambiar los breakpoints por ejemplo, buscamos los media queries en el archivo y los cambiamos aca:
 
 <pre>
-<code class="language-scss">
-// Small screen / tablet
-//** Deprecated `$screen-sm` as of v3.0.1
+<code class="language-scss">// Small screen / tablet
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;
-//** Deprecated `$screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
-//** Deprecated `$screen-md` as of v3.0.1
 $screen-md:                  992px !default;
 $screen-md-min:              $screen-md !default;
-//** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
-//** Deprecated `$screen-lg` as of v3.0.1
 $screen-lg:                  1200px !default;
 $screen-lg-min:              $screen-lg !default;
-//** Deprecated `$screen-lg-desktop` as of v3.0.1
-$screen-lg-desktop:          $screen-lg-min !default;
-</code>
+$screen-lg-desktop:          $screen-lg-min !default;</code>
 </pre>
 
 ### Como usar media queries en Bootstrap
@@ -214,16 +188,13 @@ Si estás empezando a usar Sass, pero aun estás acostumbrado al método descrit
 
 **Opción 1 - Todos los media queries dentro de un partial**
 <pre>
-<code class="language-bash">
-_media-queries.scss
-</code>
+<code class="language-bash">_media-queries.scss</code>
 </pre>
 
 Y luego los media queries adentro.
 
 <pre>
-<code class="language-scss">
-@media (min-width: $screen-sm-min) { 
+<code class="language-scss">@media (min-width: $screen-sm-min) { 
     // Todos los selectores para este breakpoint
 }
 @media (min-width: $screen-md-min) {
@@ -231,29 +202,24 @@ Y luego los media queries adentro.
 }
 @media (min-width: $screen-lg-min) {
     // Todos los selectores para este breakpoint
-}
-</code>
+}</code>
 </pre>
 
 **Opción 2 - Dividir los breakpoint en distintos partials**
 
 <pre>
-<code class="language-bash">
-_breakpoint-small.scss
+<code class="language-bash">_breakpoint-small.scss
 _breakpoint-medium.scss
-_breakpoint-large.scss
-</code>
+_breakpoint-large.scss</code>
 </pre>
 
 Y luego el media query correspondiente en cada partial.
 
 <pre>
-<code class="language-scss">
-// partial _breakpoint-small.scss
+<code class="language-scss">// partial _breakpoint-small.scss
 @media (min-width: $screen-sm-min) { 
     // Todos los selectores para este breakpoint
-}
-</code>
+}</code>
 </pre>
 
 Aca lo único que hacemos es agrupar los media queries en archivos para facilitar un poco la búsqueda, tomar las variables definidas en _variables.scss y las usamos para crear los media queries.
@@ -262,8 +228,7 @@ Aca lo único que hacemos es agrupar los media queries en archivos para facilita
 Personalmente me gusta crear un mixin y en vez de tener un montón de selectores dentro de un media query, prefiero poner media queries dentro del selector que lo necesite. Esto evita que tenga que ir a otro lado y buscar donde los puse dentro de un mar de selectores. Primero creamos el mixin:
 
 <pre>
-<code class="language-scss">
-@mixin breakpoint($mq) {
+<code class="language-scss">@mixin breakpoint($mq) {
     @if $mq == small {
         @media (min-width: 768px) {
             @content;
@@ -277,15 +242,13 @@ Personalmente me gusta crear un mixin y en vez de tener un montón de selectores
             @content;
         }
     }  
-}
-</code>
+}</code>
 </pre>
 
 Ahora cada vez que queramos poner un breakpoint lo podemos usar directamente dentro del selector usando un `@include sin la necesidad de escribir todo el código necesario para un media query:
 
 <pre>
-<code class="language-scss">
-.habilidades {
+<code class="language-scss">.habilidades {
     // en pantallas menores a 768px el color será rojo
     color: red; 
     // en pantallas desde 768px el color será azul
@@ -300,6 +263,5 @@ Ahora cada vez que queramos poner un breakpoint lo podemos usar directamente den
     @include breakpoint(large) {
         color: yellow;
     }
-}
-</code>
+}</code>
 </pre>

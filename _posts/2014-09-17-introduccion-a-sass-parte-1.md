@@ -41,11 +41,7 @@ Con el tiempo aprendí a usar el terminal. Como ya vimos, no es necesario ya que
 1. Instalar Ruby. Si estás usando un Mac no tienes que preocuparte, ya viene instalado. Si usas Windows, puedes usar el [instalador de ruby](http://www.rubyinstaller.org/).
 2. Abre el terminal y ejecuta el siguiente comando: 
 
-<pre>
-<code class="language-scss">
-$ gem install sass 
-</code>
-</pre>
+<pre><code class="language-scss">$ gem install sass </code></pre>
 
 ## Ejemplo práctico
 
@@ -54,37 +50,31 @@ Ya con Sass instalado, pasaremos a crear un proyecto simple usando Sass, solo co
 Creamos la carpeta donde irán nuestros archivos y la estructura final debería ser así:
 
 <pre>
-<code class="language-bash">
-proyecto-sass/
+<code class="language-bash">proyecto-sass/
 |-- index.html
-|-- style.scss
-</code>
+|-- style.scss</code>
 </pre>
 
 Nuestro index.html es muy básico y en el enlazamos lo que será el css:
 
 <pre>
-<code class="language-markup">
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Probando Sass</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Hello, world!</h1>
-</body>
-</html>
-</code>
+<code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Probando Sass&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
 </pre>
 
 Hasta el momento todo es tal cual como si trabajáramos con css. A continuación comenzamos a usar Sass. Abrimos el terminal, nos dirigimos a la carpeta de nuestro proyecto y ejecutamos el siguiente comando:
 
 <pre>
-<code class="language-bash">
-$ sass --watch style.scss:style.css
-</code>
+<code class="language-bash">$ sass --watch style.scss:style.css</code>
 </pre>
 
 Ahora automáticamente se crea el archivo `style.css` y estamos vigilando nuestro archivo `style.scss` para que ante cualquier cambio en él, se compila y actualiza.
