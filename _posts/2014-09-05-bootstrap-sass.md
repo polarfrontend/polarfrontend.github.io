@@ -245,7 +245,7 @@ Personalmente me gusta crear un mixin y en vez de tener un montón de selectores
 }</code>
 </pre>
 
-Ahora cada vez que queramos poner un breakpoint lo podemos usar directamente dentro del selector usando un `@include` sin la necesidad de escribir todo el código necesario para un media query:
+Ahora cada vez que queramos poner un breakpoint lo podemos usar directamente dentro del selector usando un `@include sin la necesidad de escribir todo el código necesario para un media query:
 
 <pre>
 <code class="language-scss">.habilidades {
