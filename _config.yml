@@ -21,10 +21,6 @@ exclude: [
     .gitignore
 ]
 
-include: [
-    .htaccess
-]
-
 # Plugins
 gems: 
     - jekyll-sitemap
