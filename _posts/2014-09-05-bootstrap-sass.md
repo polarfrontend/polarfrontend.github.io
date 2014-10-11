@@ -27,7 +27,7 @@ Personalmente prefiero usar Bower. Abro el terminal, me dirigo al lugar donde cr
 
 ### Compilando Sass
 
-Normalmente uso Grunt para compilar mi Sass además de ejecutar otras tareas, pero dejaré eso para otro post. Existen también programas con un interfaz gráfico en caso de que no te sientas cómodo usando el terminal. Para los usuarios de Mac está [Codekit](https://incident57.com/codekit/), [Prepros](http://alphapixels.com/prepros/) está disponible tanto para usuarios de Windows y Mac, al igual que [Koala](http://koala-app.com/). Sin embargo, esto es fácil de hacer desde el terminal:
+Normalmente uso Grunt para compilar mi Sass además de ejecutar otras tareas, [pero dejaré eso para otro post](http://polarfrontend.github.io/optimiza-tu-workflow-con-grunt/). Existen también programas con un interfaz gráfico en caso de que no te sientas cómodo usando el terminal. Para los usuarios de Mac está [Codekit](https://incident57.com/codekit/), [Prepros](http://alphapixels.com/prepros/) está disponible tanto para usuarios de Windows y Mac, al igual que [Koala](http://koala-app.com/). Sin embargo, esto es fácil de hacer desde el terminal:
 
 <pre>
 <code class="language-bash">sass --watch tu-archivo-sass.scss:tu-archivo-css.css</code>
