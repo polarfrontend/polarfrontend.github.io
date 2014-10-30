@@ -3,6 +3,15 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        uglify: {
+            main: {
+                files: {
+                    '_includes/loadcss.js' : ['js/loadcss.js'],
+                    'js/prism.min.js' : ['js/prism.js']
+                }
+            }
+        },
+
         sass: {
             dist: {
                 options: {
@@ -35,6 +44,10 @@ module.exports = function (grunt) {
             stylesheets: {
                 files: ['scss/**/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'shell:jekyllBuild']
+            },
+            javascript: {
+                files: ['js/*.js'],
+                tasks: ['uglify', 'shell:jekyllBuild']
             },
             site: {
                 files: ['index.html', '_layouts/*.html', '_posts/*.md', '_includes/*.html', '/index.html', '_config.yml'],
