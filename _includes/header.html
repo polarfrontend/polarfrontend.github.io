@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="tbDKwcfyDq3avO8tmyoEZyb3rpqzgQwkbqcuoWiiqxg" />
-    {% if page.description %} 
-        <meta name="description" content="{{ page.description }}">
-    {% else %}
-        <meta name="description" content="{{ site.description }}">
-    {% endif %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-
-    <!-- Typekit -->
-    <script type="text/javascript" src="//use.typekit.net/jqp8rec.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-</head>
-<body>
-
-    <header class="main-header" role="banner">
-        <div class="logo"><a href="{{ site.baseurl }}/">polar front-end</a></div>
-        <nav class="main-nav" role="navigation">
-            <a href="{{ site.baseurl }}/">Inicio</a>
-            <a href="{{ site.baseurl }}/articulos">Artículos</a>
-            <a href="mailto:orlando@obaez.com">Contacto</a>
-        </nav>
-    </header>
+<header class="main-header" role="banner">
+    <div class="logo"><a href="{{ site.baseurl }}/">polar front-end</a></div>
+    <nav class="main-nav" role="navigation">
+        <a href="{{ site.baseurl }}/">Inicio</a>
+        <a href="{{ site.baseurl }}/articulos">Artículos</a>
+        <a href="mailto:orlando@obaez.com">Contacto</a>
+    </nav>
+</header>
 
