@@ -13,8 +13,12 @@
     {% endif %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <style>
+        {% include criticalcss.css %}
+    </style>
+    <script>
+        {% include loadcss.js %}
+    </script>
 
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/jqp8rec.js"></script>
