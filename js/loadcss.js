@@ -41,3 +41,17 @@ function loadCSS( href, before, media ){
     return ss;
 }
 loadCSS( "/css/main.css" );
+
+// test for font-face version to load via Data URI'd CSS
+var fontFile = "/css/fontswoff.css",
+    ua = window.navigator.userAgent;
+
+// Android's default browser needs TTF instead of WOFF
+if( ua.indexOf( "Android 4." ) > -1 && ua.indexOf( "like Gecko" ) > -1 && ua.indexOf( "Chrome" ) === -1 ) {
+    fontFile = "/css/fontsttf.css";
+}
+
+// load fonts
+if( fontFile ) {
+    loadCSS( fontFile );
+}
