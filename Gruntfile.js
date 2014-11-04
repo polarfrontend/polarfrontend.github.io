@@ -40,6 +40,20 @@ module.exports = function (grunt) {
             }  
         },
 
+        svgstore: {
+            options: {
+                prefix : 'icon-',
+                svg: {
+                    style: 'display: none;'
+                }
+            },
+            default: {
+                files: {
+                    '_includes/svg-defs.svg': ['svg/*.svg']
+                }
+            }
+        },
+
         watch: {
             stylesheets: {
                 files: ['scss/**/*.scss'],
@@ -50,8 +64,12 @@ module.exports = function (grunt) {
                 tasks: ['uglify', 'shell:jekyllBuild']
             },
             site: {
-                files: ['index.html', '_layouts/*.html', '_posts/*.md', '_includes/*.html', '/index.html', '_config.yml'],
+                files: ['index.html', '_layouts/*.html', '_posts/*.md', '_includes/*', '/index.html', '_config.yml'],
                 tasks: ['shell:jekyllBuild']
+            },
+            svg: {
+                files: ['svg/*.svg'],
+                tasks: ['svgstore', 'shell:jekyllBuild']
             },
             options: {
                 spawn : false,
