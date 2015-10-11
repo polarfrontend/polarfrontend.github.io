@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed'
+                    outputStyle: 'compressed'
                 },
                 files: {
                     'css/main-unprefixed.css' : 'scss/main.scss'
