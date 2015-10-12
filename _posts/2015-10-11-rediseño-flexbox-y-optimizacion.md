@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rediseño, flexbox y optimización"
-description: 
+description: Cómo optimizar tu sitio para que carge en menos de un segundo.
 date:   2015-10-11
 ---
 
@@ -107,7 +107,7 @@ Con esto estabas listo, we can call it a day y nos vamos a casa. Sin embargo, la
 
 ### Pagespeed Insights
 
-Una de las herramientas más populares es el [Google Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=es). Ponemos la url y nos indica todo lo que tenemos que mejorar. Una de las recomendaciones más críticas y que a muchos les cuesta entender el significado es el "Eliminar el JavaScript que bloquea la visualización y el CSS del contenido de la mitad superior de la página". Esto es muy importante y vital a la hora de conseguir un speedindex inferior a 1000. Lo que nos están diciendo es que hay hoja(s) de estilos y scripts que están bloqueando la visualización del contenido arriba del fold, esto también suele incluir los famosos webfonts. 
+Una de las herramientas más populares es el [Google Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=es). Ponemos la url y nos indica todo lo que tenemos que mejorar. Una de las recomendaciones más críticas y que a muchos les cuesta entender el significado es "Eliminar el JavaScript que bloquea la visualización y el CSS del contenido de la mitad superior de la página". Esto es muy importante y vital a la hora de conseguir un speedindex inferior a 1000. Lo que nos están diciendo es que hay hoja(s) de estilos y scripts que están bloqueando la visualización del contenido arriba del fold, esto también suele incluir los famosos webfonts. 
 
 ### La solución
 
@@ -133,7 +133,7 @@ Otra de las herramientas esenciales es [webpagetest.org](http://www.webpagetest.
 
 ![alt text](/img/speedindex.jpg "Speedindex")
 
-Como se puede ver en al foto el speedindex es de 800. Esto significa que en 0.8 segundos el sitio está visualmente completo. Esa es la percepción del usuario al ingresar y eso es lo que nos interesa, no el tiempo en que todo el sitio tarde en cargar.
+Como se puede ver en la foto el speedindex es de 800. Esto significa que en 0.8 segundos el sitio está visualmente completo. Esa es la percepción del usuario al ingresar y eso es lo que nos interesa, no el tiempo en que todo el sitio tarde en cargar.
 
 ## Flexbox y Jekyll
 
